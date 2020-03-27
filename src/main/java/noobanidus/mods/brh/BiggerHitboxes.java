@@ -34,6 +34,9 @@ public class BiggerHitboxes {
   }
 
   public void onConfigChange (ModConfig.ConfigReloading event) {
-    onLoadComplete(null);
+    if (event.getConfig().getType() == ModConfig.Type.COMMON) {
+      ConfigManager.COMMON_CONFIG.setConfig(event.getConfig().getConfigData());
+      onLoadComplete(null);
+    }
   }
 }
