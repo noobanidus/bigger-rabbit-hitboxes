@@ -33,7 +33,10 @@ public class BiggerHitboxes {
     EntityType.RABBIT.size = EntitySize.flexible((float) (double) ConfigManager.WIDTH.get(), (float) (double) ConfigManager.HEIGHT.get());
   }
 
-  public void onConfigChange (ModConfig.ConfigReloading event) {
-    onLoadComplete(null);
+  public void onConfigChange (ModConfig.Reloading event) {
+    if (event.getConfig().getType() == ModConfig.Type.COMMON) {
+      ConfigManager.COMMON_CONFIG.setConfig(event.getConfig().getConfigData());
+      onLoadComplete(null);
+    }
   }
 }
