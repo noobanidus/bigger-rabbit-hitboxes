@@ -31,6 +31,9 @@ public class BiggerHitboxes {
 
   public void onLoadComplete (FMLLoadCompleteEvent event) {
     EntityType.RABBIT.size = EntitySize.flexible((float) (double) ConfigManager.WIDTH.get(), (float) (double) ConfigManager.HEIGHT.get());
+    if (ConfigManager.SILVERFISH.get()) {
+      EntityType.SILVERFISH.size = EntitySize.flexible((float) (double) ConfigManager.SILVERFISH_WIDTH.get(), (float) (double) ConfigManager.SILVERFISH_HEIGHT.get());
+    }
   }
 
   public void onConfigChange (ModConfig.Reloading event) {
