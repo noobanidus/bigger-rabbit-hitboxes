@@ -22,7 +22,8 @@ public class ConfigManager {
     HEIGHT = COMMON_BUILDER.comment("height of the rabbit hitbox").defineInRange("height", 1.0, 0.0, 10.0);
     COMMON_BUILDER.pop();
     COMMON_BUILDER.push("silverfish");
-    SILVERFISH_WIDTH = COMMON_BUILDER.comment("width of the silverfish hitbox").defineInRange("width", 1.0, 0.0, 10.0);
+    SILVERFISH = COMMON_BUILDER.comment("whether or not silverfish should also be affected").define("modify_silverfish", true);
+    SILVERFISH_WIDTH = COMMON_BUILDER.comment("width of the silverfish hitbox").defineInRange("width", 1.3, 0.0, 10.0);
     SILVERFISH_HEIGHT = COMMON_BUILDER.comment("height of the silverfish hitbox").defineInRange("height", 1.0, 0.0, 10.0);
     COMMON_BUILDER.pop();
 
