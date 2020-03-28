@@ -28,7 +28,7 @@ displayURL="https://minecraft.curseforge.com/projects/bigger-rabbit-hitboxes" #o
 authors="Noobanidus"
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Makes Rabbit Hitboxes bigger, so they're easier to hit!
+Makes Rabbit and Silverfish Hitboxes bigger, so they're easier to hit!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.brh]] #optional
